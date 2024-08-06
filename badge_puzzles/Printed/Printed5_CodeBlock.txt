@@ -1,0 +1,38 @@
+"CodeBlock" is found underneath the PN532 on the front of the badge. The PN532 and it's base support can be easily pulled off to reveal the block of code underneath.
+
+This one was fun to learn and make. It was originally significantly more difficult, but would have required graph paper to complete. As such, I made it possible to solve via the online compilers for Befung. 
+
+1. The characters inside this block appear to be strictly numbers and symbols. We mainly see a bunch of *, +, -, and of course a ton of <, >, and v. Let's type it out as to not strain our eyes too much:
+
+99*73*1++,v
+v,++2*8+55<
+>96*2-,93+v
+v5*45,+4*9<
+>*4+,77*,7v
+v1+99,*5+8<
+>+5*,88+1+v
+v1*5+55,*4<
+>+,55+5*1+v
+v2*+55*26,<
+>+,73*5*,9v
+v6*89,-1*8<
+>+,@
+
+At first glance, it might look like one long weird math problem.
+
+2. The title of this puzzle is "CodeBlock", so this must be some kind of code that is just super hard to read? Maybe it is obfuscated or an odd language? There are a ton of things you can try to google here, and will take up nearly all of your time on this puzzle. Here are a few suggestions:
+
+weird programming language code
+code block language "<" ">" math
+programming language "<"
+
+3. You should eventually stumble upon the great world of Esoteric programming languages (esolang). Esolang are mainly joke languages that - while completely functional - are often hard or impossible to understand without significant knowledge of the syntax. A wikipedia can be found for most of these insane pseudolanguages here: https://esolangs.org. You may find that the "Befunge" esolang characters match directly with the block of code on our badge. Time to learn Befunge!
+
+4. Let's start by reading a quick rundown at https://esolangs.org/wiki/Befunge. Befunge is the first "2D" programming language that can actually mutate during runtime! It is 2D in the sense that the instructions can be read from left to right, right to left, top to bottom, and bottom to top! Different characters (>, <, ^, V) change the reading direction of the running code, while other characters (+,-,*,/,) modify/pop numbers and push it onto the stack. You even have the ability to "get" a value from your graph and "put" a value from your stack anywhere on the graph. I highly advise you take a look at this language and attempt to decode the block using the syntax provided from the wiki. There is some fun math involved and it will help you learn how to use this awesomely useless language. 
+
+5. Or, we can just use an online compiler since we now know it is a block of code written in Befunge:  https://www.tutorialspoint.com/compile_befunge_online.php
+
+Compiling the code, we get the following string output: gR4ph1K_D33ziGN
+
+Flag: gR4ph1K_D33ziGN
+

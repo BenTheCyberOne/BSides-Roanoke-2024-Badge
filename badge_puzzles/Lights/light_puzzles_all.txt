@@ -1,0 +1,16 @@
+1. Morse Code (Light Puzzle 1) - GREEN
+Answer: Fl@sh1nG_LIght5
+Hint: SOS
+Puzzle: ..-. .-.. .--.-. ... .... .---- -. --. ..--.- .-.. .. --. .... - .....
+
+2. Binary (Light Puzzle 2) - BLUE
+Answer: R3flECTed_bits
+Hint: How many bits are in a byte?
+Hint2: Perhaps you need a magic mirror to solve this one...
+Puzzle: atbash(I3uoVXGvw_yrgh) = 01001001 00110011 01110101 01101111 01010110 01011000 01000111 01110110 01110111 01011111 01111001 01110010 01100111 01101000 - the 6 neopixels will light up to create each char from binary (1 is on, 0 is off). The trick here is that each byte is lit up using the two last bits first, and then the next six. Folks will have to write the byte backwards - and eventually atbash the translated char into the answer (get it, because you have to write the bytes backwards). On paper, it may look like this: 00010110 11100110 01001110 10011110 11111010 11101110 01101110 11100010 00011010 01101010 11110110 10101110 11001100 10010010
+
+3. Senary (Light Puzzle 3)
+Answer: likebinarybuthexed
+Hint: BASICALLY(least abstract way to count using two hands)
+Puzzle: 
+Base36[21(010110),18(010010),20(010100),14(001110),11(1011),18(010010),23(010111),10(001010),27(011011),34(100010),11(001011),30(011110),29(011101),17(010001),14(001110),33(100001),14(001110),13(001101)] - the 6 neopixels will light up to create each decimal (1 is on, 0 is off). Decimal is matched to the Base36 table to get the equivalent character

@@ -1,0 +1,77 @@
+Connected via Serial to the badge:
+1. type "flag 2"
+2. the response will be an "interview" in which you have very limited time (.5 seconds) to respond. The first question given is: "Cells."
+When you fail to answer in the given time, this phrase is given:
+"You're not even close to baseline..."
+3. To find out what this might be referring to, let's google some things from what we were just given.
+Possible googles:
+"Cells."
+"Cells." baseline
+"close to baseline" cells
+"not even close to baseline"
+4. You should reach upon the world of Blade Runner, specifically the movie BladeRunner 2049. Upon further research, you will find that you must respond with "Cells." as that is the answer found in the transcript of the movie (Reddit, IMDb Page, etc)
+5. To input the answer in time, you must write a quick script (python) to send appropriate serial commands and the answer quickly. (Example script found below)
+6. Upon answering "Cells.", you are given another question. Once again, this followes the dialog found in the movie. Now you just have to place more answers in your script and you will be presented with the flag upon completion of the interview.
+
+Flag: Sh3lls_wiTH1n_SHE11Z
+
+Example Pyserial script:
+
+import serial
+import time
+
+# Open serial connection
+ser = serial.Serial('COM6', 9600, timeout=1)
+
+# Wait for Arduino to reset
+time.sleep(2)
+
+# Send the initial command to start the interview
+ser.write(b"flag 2\n")
+
+# Answers to interview
+answers = [
+    "Cells.",
+    "Cells.",
+    "Cells.",
+    "Cells.",
+    "Interlinked.",
+    "Interlinked.",
+    "Interlinked.",
+    "Interlinked.",
+    "Interlinked.",
+    "Interlinked.",
+    "Interlinked.",
+    "Within cells interlinked.",
+    "Within cells interlinked. Within cells interlinked. Within cells interlinked."
+]
+
+# Read from serial until we get a newline (0x00)
+def read_serial_until(marker):
+    data = b""
+    while True:
+        char = ser.read(1)
+        data += char
+        if char == marker.encode():
+            break
+    return data.decode().strip()
+
+# Function to send an answer
+def send_answer(answer):
+    ser.write(answer.encode() + b"\n")
+
+# Solve the interview
+for answer in answers:
+    # Wait for the question and print it
+    question = read_serial_until("\n")
+    print("Received question:", question)
+
+    # Send the corresponding answer
+    send_answer(answer)
+    print("sent answer:",answer)
+
+final_message = read_serial_until("\n") # required to do this twice since we get 2 different print statements (2nd is the flag!)
+final_message = read_serial_until("\n")
+print("Final message from the system: ", final_message)
+# Close serial connection
+ser.close()

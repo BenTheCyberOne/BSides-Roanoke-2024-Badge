@@ -1,0 +1,16 @@
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .container {
+    width: 100%;          /* Full width container */
+    display: flex;        /* Use flexbox */
+    justify-content: center; /* Horizontally center content */
+  }
+  
+  .centered-dropdown {
+    width: 200px;         /* Specify width */
+  }
+  

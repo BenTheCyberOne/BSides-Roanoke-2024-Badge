@@ -1,0 +1,14 @@
+"Ring" is located at the top lefthand side of the front of the badge. These character patterns may look weirdly familiar to those who have participated in CTFs before.
+
+1. The "Ring" is unspun is as follows: P1le_4pmslb_rf3_P0R
+
+2. Ring = Circle = Rotation (ROT)
+
+3. Attempting to use the classic ROT13 (caesar cipher) does not appear to show anything of use (ROT13{P1le_4pmslb_rf3_P0R} = C1yr_4czfyo_es3_C0E). Let's try starting from ROT1 and incrementing until we find something!
+
+ROT1{P1le_4pmslb_rf3_P0R} = Q1mf_4qntmc_sg3_Q0S
+ROT2{P1le_4pmslb_rf3_P0R} = R1ng_4round_th3_R0T
+
+ROT2 gave us some fitting text!
+
+Flag: R1ng_4round_th3_R0T

@@ -1,0 +1,38 @@
+Light puzzle 3 "Red" is the third and final puzzle shown in Puzzle Mode.
+
+This one is quite backwards from how most puzzles might go.
+
+1. Like the first and second puzzle, it may be easier to record these patterns of lights to slowdown the playback for figuring this one out. Watch the light patterns until the colors change away from red. Notice how all 6 lights are used in each flash, with some not flashing red at all?
+
+2. Just like the second puzzle, it looks like we may be working with bits again. Red = On = 1, No Color = Off = 0. We also know from the last puzzle that the NeoPixels are labeled 1-6, so we can tell which bit should be 1 or 0. This is different however - we are viewing bytes 6 bits at a time, and the total amount of bits counted is 108 which is not divisible by 8 without a remainder. Maybe we are not looking for whole bytes?
+
+3. Let's write down the entire patten as their bit representatives:
+
+Example:
+First 6 Bits:
+Bit 1: LED1 = Off (0)
+Bit 2: LED2 = Red (1)
+Bit 3: LED3 = Off (0)
+Bit 4: LED4 = Red (1)
+Bit 5: LED5 = Off (0)
+Bit 6: LED6 = Red (1)
+
+
+Completed Cycle: 010101 010010 010100 001110 001011 010010 010111 001010 011011 100010 001011 011110 011101 010001 001110 100001 001110 001101
+
+4. Try as we might, we can't seem to decode this binary string into anything interesting. No amount of translation or encoding will fix the fact that we are missing bits to make up the entire 8bit Byte. We need to research if there is a way to count or encode data using a base of 6.
+Suggested Searches:
+6 bit binary
+6 bit encoding 
+counting base 6
+base 6 binary
+
+5. Hopefully you arrive upon the Senary numeral system. Senary is wild and some of the wacky things you can do with it are definitely worth reading up on, especially when it comes to counting on your fingers. Instead of using our Octal (base 8) numeric system with our 6-bit pairs directly, we will need to transcribe it to the senary value somehow. Reading further about Senary/base6, you should find that Base36 encoding is used in order to successfully represent the decimal values to ASCII characters. This could be our ticket to the flag!
+
+6. Let's get the Octal decimal value for each 6-bit pair. 
+
+21(010110),18(010010),20(010100),14(001110),11(1011),18(010010),23(010111),10(001010),27(011011),34(100010),11(001011),30(011110),29(011101),17(010001),14(001110),33(100001),14(001110),13(001101)
+
+7. If we match each decimal value to the Base36 value equivalent (the best way to do this is via the table found within the Wikipedia page of Senary) we end up getting the following string: likebinarybuthexed
+
+Flag: likebinarybuthexed

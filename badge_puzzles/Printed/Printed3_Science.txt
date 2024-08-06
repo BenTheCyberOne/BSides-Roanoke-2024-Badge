@@ -1,0 +1,16 @@
+"Science" is found under the arc axial spine support on the back of the badge. The arc axial spine support must be taken off via screwdriver at the respective screw hole.
+
+1. Under each axial is a handful of words that may look familiar to those who frequent chemistry/physics. 
+"Phosphorus Erbium Iodine Oxygen Deuterium Iodine"
+"Carbon Plutonium Z-boson Z-boson"
+"Lepton Einsteinium"
+
+2. Let's try matching these to their periodic symbols. Z-boson and Lepton don't look like elements though. Looking up Deuterium shows us that it isn't an element either, but rather an isotope of Hydrogen. It may be important that each word starts with a capital letter. Let's try just using the captial letter of the non elements and see what we can get.
+
+"P(hosphorus) Er(bium) I(odine) O(xygen) D(euterium) I(odine)"
+"C(arbon) Pu(Plutonium) Z(boson) Z(boson)"
+"L(epton) Es(Einsteinium)"
+
+3. Put it together and we get: PErIODICPuZZLEs
+
+Flag: PErIODICPuZZLEs

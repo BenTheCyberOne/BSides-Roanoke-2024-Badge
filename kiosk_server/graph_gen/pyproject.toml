@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "graph-gen"
+version = "0.1.0"
+description = "A simple graph generator"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+numpy = "^1.26.4"
+matplotlib = "^3.9.0"
+netgraph = "^4.13.2"
+pandas = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

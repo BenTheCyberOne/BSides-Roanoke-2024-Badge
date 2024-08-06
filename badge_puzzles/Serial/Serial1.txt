@@ -1,0 +1,18 @@
+Connected via Serial to the badge:
+1. type "flag 1"
+2. the response will be a riddle which you have 10 seconds to answer.
+
+Riddle: We are an army of undead, though we were never alive. We quench the mightiest of walls and eat all your resources. What are we?
+
+Since this is a cybersecurity conference, let's ensure we stay in that mindset.
+
+- "Army of undead" = zombies?
+- "though we were never alive" = robots?
+- "We quench the mightiest of walls" = quench is a weird word, typically used in the context of thirst or extinguishing via water. We put out fire with water. firewalls?
+- "and eat all your resources" = use up our bandwidth/system resources on our firewalls?
+
+We know it is a collective of zombie robots that break firewalls and use up (eat) all our resources. Zombie is another word used for bots that are connected to large C2s. These might use DDOS attacks to bring down resources. These C2s can be classified as botnets.
+
+Answer: botnet
+Flag: C0mm@nd_&_CONQU3R
+Note: If you dumped the badge firmware via picotool or similar tools, you can see the answer to this riddle right next to the function that calls it!

@@ -1,0 +1,22 @@
+<div class="scoreboard">
+    <h2  style="text-align: center; ">Current Leaderboard</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Team Name</th>
+          <th>Score</th>
+          <th>Score Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let score of scores">
+          <td>{{ score.username }}</td>
+          <td>{{ score.teamName }}</td>
+          <td>{{ score.score }}</td>
+          <td>{{ score.formattedTime }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

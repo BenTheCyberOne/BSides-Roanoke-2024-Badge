@@ -1,0 +1,13 @@
+<mat-expansion-panel hideToggle (opened)="connect()" (closed)="disconnect()" #smDialog>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ this.title_text }}
+      </mat-panel-title>
+      <mat-panel-description>
+        Serial Status Console
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Connection establishing</p>
+    <p> {{this.state}} </p>
+    <p><b>App Version {{ this.version}}</b></p>
+  </mat-expansion-panel>

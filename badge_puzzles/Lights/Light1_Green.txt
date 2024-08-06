@@ -1,0 +1,11 @@
+Light Puzzle 1 "Green" is the first puzzle shown in Puzzle Mode.
+
+1. Watch all of Puzzle 1 play out. We know it ends when the NeoPixels stop being green. Notice any familiar patterns?
+
+2. Just like how you got to Puzzle Mode using the onboard button, "Green" is a flag being flashed in Morse Code. This can be seen with all 6 lights flashing in a longer or shorter pattern. It may help to record this pattern to slowdown the playback if it goes too fast for you.
+
+3. Transcribed, the pattern is as follows: ..-. .-.. .--.-. ... .... .---- -. --. ..--.- .-.. .. --. .... - .....
+
+4. Decode that, and we get the flag!
+
+Flag: Fl@sh1nG_LIght5

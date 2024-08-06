@@ -1,0 +1,16 @@
+<div class="container">
+    <form [formGroup]="teamForm" (ngSubmit)="submitTeam()">
+        <div>
+            <label for="username">Username:</label>
+            <input id="username" type="text" formControlName="username">
+        </div>
+        <div>
+            <label for="team">Team:</label>
+            <select id="team" class="centered-dropdown" formControlName="teamID">
+                <option *ngFor="let option of dropdownData" [value]="option.teamId">{{ option.teamName }}</option>
+            </select>
+        </div>
+        <button type="submit" class="primary">Submit</button>
+    </form>
+    <p> {{ this.message }} </p>
+</div>

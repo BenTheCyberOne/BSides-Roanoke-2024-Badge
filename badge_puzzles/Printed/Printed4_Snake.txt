@@ -1,0 +1,37 @@
+"Snake" is found on the right-hand side on the front of the badge, right beside the PN532.
+
+1. The characters found around the snake may look quite familiar to those who deal with this common encoding scheme. Seeing as we only have a basic character set of A-Z, a few numbers, and repeating characters it might be safe to say this string around the snake is encoded with something like Base64. This might not matter though as we don't have any indication of where this string appears to start!
+
+    Y
+   (")
+   V\\w
+    J\\M
+     A))z
+    V//0
+   F//0
+  R((X
+   s\\6
+    M\\N
+     1\\T
+      J))M
+     B//U
+    V//R
+   F//X
+   R((Y
+   M\\S
+    Z\\9
+      V
+
+2. We can of course take all the characters and attempt to bruteforce the answer by lining them up in all kinds of ways, but that could take ages. Let's try to think more simple about this. Instead of reading each character left to right, let's try reading each character top to bottom. Don't be fooled by this serpent - It's tongue and tail are characters too!!
+
+Base64{YVJAVFRsM1JBVFRMZV} = aR@TTl3RATTLe
+YwMz00X6NTMURXYS9V = non-ASCII gibberish
+
+3. From the left side of the snake going from tongue to tail, we get a part of the flag! The right hand side however does not give us the other half. Instead of going from top to bottom on the right side, let's slither like a snake and go from the top of the left side down to the tail, then back up the right side!
+
+Base64{YVJAVFRsM1JBVFRMZV9SYXRUMTN6X00zMw} = aR@TTl3RATTLe_RatT13z_M33
+
+Flag: aR@TTl3RATTLe_RatT13z_M33
+
+
+bm9uYWdvbiBpbmZpbml0eSBvcGVucyB0aGUgZG9vcg==

@@ -1,0 +1,16 @@
+"Symbols" is located near the bottom of the back of the badge, under the battery pack.
+
+1. These symbols don't look random, and are unique except for one character which is repeated 3 times. This might tell us they are substituted for a human readable string
+Symbols: 👎︎📂︎■︎♑︎⌘︎♉︎📁︎■︎♉︎⧫︎♒︎🗏︎♉︎🕈︎✋︎☠︎☝︎
+
+2. Time to do some googling! Let's try searching for:
+weird symbol cipher
+symbols fonts
+symbols ctf
+cryptography weird symbol cipher
+
+3. We should stumble upon the "Wingdings" font - used almost exclusivly for Microsoft to display symbols instead of letters. Look up a translator or pull up the direct character mapping and we can easily decode the symbols into readable text!
+
+👎︎📂︎■︎♑︎⌘︎♉︎📁︎■︎♉︎⧫︎♒︎🗏︎♉︎🕈︎✋︎☠︎☝︎ = D1ngz_0n_th3_WING
+
+✡︎♏︎♋︎♒︎📪︎ ♓︎⧫︎ ♓︎⬧︎ ♋︎ ⬧︎●︎♓︎♑︎♒︎⧫︎ ■︎□︎♎︎ ⧫︎□︎ 🕆︎■︎♎︎♏︎❒︎⧫︎♋︎●︎♏︎

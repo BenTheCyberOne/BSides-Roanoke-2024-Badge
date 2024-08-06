@@ -1,0 +1,34 @@
+Light puzzle 2 "Blue" is the second puzzle shown in Puzzle Mode.
+
+This one is quite tricky.
+
+1. Like the first puzzle, it may be easier to record these patterns of lights to slowdown the playback for figuring this one out. Watch the light patterns until the colors change away from blue/white. Notice anything peculiar?
+
+2. These patterns appear to show 2 lights in either a white or blue color, then all 6 lights in either a white or blue color. 2+6 = 8, so maybe each 2 and 6 pattern is one byte? We see some are blue and some are white - it might be safe to assume that the darker color = 1 while white = 0. If these are bytes being shown, how can we tell which bit is which?
+
+3. If we take off the light covers by unscrewing the screw found in the arc axial spine behind the badge, we find that the NeoPixels are labeled as LED1, LED2, LED3, LED4, LED5, and LED6. Let's use these labels as a baseline for which bit goes where.
+
+Example:
+First 8 Bits:
+Bit 1: LED1 = White (0)
+Bit 2: LED2 = White (0)
+Bit 3: LED1 = White (0)
+Bit 4: LED2 = Blue (1)
+Bit 5: LED3 = White (0)
+Bit 6: LED4 = Blue (1)
+Bit 7: LED5 = Blue (1)
+Bit 8: LED6 = White (0)
+
+Completed cycle: 00010110 11100110 01001110 10011110 11111010 11101110 01101110 11100010 00011010 01101010 11110110 10101110 11001100 10010010
+
+4. Attempting to translate that binary into hex/ASCII doesn't appear to result in any human readable text. It must be encoded or translated in some way to hide its true contents. We can try bit shifting left, bit shifting right, inverting bits, etc. Something strange happens when we reverse the binary string however, we get some kind of obviously hidden text!
+
+Reverse (Mirrored){00010110 11100110 01001110 10011110 11111010 11101110 01101110 11100010 00011010 01101010 11110110 10101110 11001100 10010010} = 01001001 00110011 01110101 01101111 01010110 01011000 01000111 01110110 01110111 01011111 01111001 01110010 01100111 01101000
+
+ASCII{01001001 00110011 01110101 01101111 01010110 01011000 01000111 01110110 01110111 01011111 01111001 01110010 01100111 01101000} = I3uoVXGvw_yrgh
+
+5. This has to be the flag, just in some kind of ciphertext form. This string inherits a lot of the properties that might arise when something is encrypted in a substitution cipher. To get to this point, we had to mirror the initial binary pattern flashed from the NeoPixels. One of the most common substitution ciphers is atbash, a cipher that mirrors the alphabet so that a=z, b=y, etc. Run this ciphertext through the atbash cipher and we get the flag!
+
+atbash{I3uoVXGvw_yrgh} = R3flECTed_bits
+
+Flag: R3flECTed_bits

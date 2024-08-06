@@ -1,0 +1,54 @@
+1. Befunge-93 Programming
+Answer: gR4ph1K_D33ziGN
+Puzzle:
+99*73*1++,v
+v,++2*8+55<
+>96*2-,93+v
+v5*45,+4*9<
+>*4+,77*,7v
+v1+99,*5+8<
+>+5*,88+1+v
+v1*5+55,*4<
+>+,55+5*1+v
+v2*+55*26,<
+>+,73*5*,9v
+v6*89,-1*8<
+>+,@
+
+2. ROT-2 (or ROT-28)
+Answer: R1ng_4round_th3_R0T
+Puzzle:
+P1le_4pmslb_rf3_P0R
+
+3. Periodic Symbols
+Answer: Periodic Puzzles
+Puzzle:
+Phosphorus Erbium Iodine Oxygen Deuterium Iodine Carbon Plutonium Z-boson Z-boson Lepton Einsteinium
+
+4. Rattlesnake
+Answer: aR@TTl3RATTLe_RatT13z_M33
+Puzzle: (Base64)YVJAVFRsM1JBVFRMZV9SYXRUMTN6X00zMw
+    Y
+   (")
+   V\\w
+    J\\M
+     A))z
+    V//0
+   F//0
+  R((X
+   s\\6
+    M\\N
+     1\\T
+      J))M
+     B//U
+    V//R
+   F//X
+   R((Y
+   M\\S
+    Z\\9
+      V
+
+5. Wingdings
+Answer: D1ngz_0n_th3_WING
+Puzzle:
+👎︎📂︎■︎♑︎⌘︎♉︎📁︎■︎♉︎⧫︎♒︎🗏︎♉︎🕈︎✋︎☠︎☝︎

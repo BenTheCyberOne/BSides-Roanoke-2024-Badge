@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scoreboard Layout</title>
+</head>
+<body>
+  <main>
+    <header class="title-bar">
+      <h1>Badge Challenge Kiosk</h1>
+    </header>
+    <header class="brand-name">
+      <img class="brand-logo" src="/b-sides-roanoke.svg" alt="logo" aria-hidden="true" height="200"/>
+    </header>
+    <section class="content">
+      <div class="left-side">
+        <app-serial-manager 
+          (showUserForm)="showUserForm($event)" 
+          (hideUserForm)="hideUserForm()">
+        </app-serial-manager>
+
+        <app-dynamic-dropdown 
+          [badge_id]="badge_id"
+          [token]="token"
+          [username]="username"
+          [teamId]="teamId"
+          *ngIf="showUserFormVar">
+        </app-dynamic-dropdown>
+      </div>
+
+      <div class="right-side">
+        <app-scoreboard>
+        </app-scoreboard>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

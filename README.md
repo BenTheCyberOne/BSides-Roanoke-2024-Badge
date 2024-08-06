@@ -15,6 +15,12 @@ Public repo for the firmware source code, design files, and puzzle answers regar
 
 /badge_pcb: directory containing the badge's KiCAD design files
 
+/badge_3d_parts: directory containing the badge's 3D printing (CAD) files
+
+/kiosk_3d_parts: directory containing the kiosk's 3D printing (CAD) files
+
+/results: directory containing the results of the BSides Roanoke 2024 Badge challenge
+
 ## Credits
 This badge could not have been completed without the efforts of those below. Kudos to them!
 - BenTheCyberOne
